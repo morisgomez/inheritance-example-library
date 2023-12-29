@@ -1,4 +1,4 @@
-//////SUPERCLASS FOR MEDIA//////
+//////SUPERCLASS FOR MEDIA://////
 class Media {
   constructor(title) {
     this._title = title; //_underscore means properties should not directly changed.
@@ -51,7 +51,7 @@ class Media {
 
 
 
-//////SUBCLASS FOR BOOK//////
+//////SUBCLASS FOR BOOK://////
 class Book extends Media {
   constructor(title, author, pages) { //author and pages properties are not extended from superclass.
     super(title); //calls super class to set title property in object created from this subclass.
@@ -72,7 +72,7 @@ class Book extends Media {
 
 
 
-//////SUBCLASS FOR MOVIE//////
+//////SUBCLASS FOR MOVIE://////
 class Movie extends Media {
   constructor(title, director, runTime) { //director and runTime properties are not extended from superclass.
     super(title); //calls super class to set title property in object created from this subclass.
@@ -136,7 +136,7 @@ speed.addRating(5);
 speed.getAverageRating();
 console.log(speed.getAverageRating()); //prints 2.3333.
 
-//5)testing setter method in superclass on movie instance. 
+//5) testing setter method in superclass on movie instance. 
 console.log(speed.isCheckedOut); //status = true.
 speed.isCheckedOut = false; //sets _isCheckedOut to false.
 console.log(speed.isCheckedOut); //calling the setter above sets status to false.
